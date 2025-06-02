@@ -17,7 +17,7 @@ export default function Home() {
 
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5050/api";
 
-  // Fetch todos
+  // Fetch todo
   const fetchTodos = async () => {
     try {
       setLoading(true);
