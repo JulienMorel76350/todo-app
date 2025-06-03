@@ -40,7 +40,7 @@ The application consists of three main components:
 
 3. Access the application:
    - Frontend: http://localhost:3000
-   - Backend API: http://localhost:5050/api/todos
+   - Backend API: http://localhost:5000/api/todos
 
 ## Development
 
@@ -90,3 +90,7 @@ To use this workflow, you need to set the following GitHub secrets:
 ## License
 
 MIT
+
+## CI/CD Status
+
+This project uses GitHub Actions for continuous integration and deployment. The workflow automatically builds and pushes Docker images to Docker Hub on every push to the main branch.
