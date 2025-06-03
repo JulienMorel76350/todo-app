@@ -30,7 +30,7 @@ jobs:
           tags: ${{ secrets.DOCKER_USERNAME }}/todo-backend:latest
           cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/todo-backend:buildcache
           cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/todo-backend:buildcache,mode=max
-          platforms: linux/amd64
+          platforms: linux/amd64,linux/arm64
           build-args: |
             NODE_ENV=production
 
@@ -42,6 +42,6 @@ jobs:
           tags: ${{ secrets.DOCKER_USERNAME }}/todo-frontend:latest
           cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/todo-frontend:buildcache
           cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/todo-frontend:buildcache,mode=max
-          platforms: linux/amd64
+          platforms: linux/amd64,linux/arm64
           build-args: |
             NEXT_TELEMETRY_DISABLED=1
